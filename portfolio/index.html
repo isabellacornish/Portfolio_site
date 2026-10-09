@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Isabella Cornish – Character Design & Illustration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&family=Figtree:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#2f2b57;--teal:#9bdcd5;--orange:#f58a1f;--yellow:#fbd56a;--cream:#fcf8ee;--ink:#2f2b57;--muted:#5d5a7e;
+--c1:#fbd3ad;--c2:#bfeae5;--c3:#fde9a6;--c4:#d6d3ee;--tear:polygon(0.0% 2.5%,2.0% 2.8%,3.5% 1.3%,5.0% 2.6%,6.5% 5.1%,8.5% 1.2%,11.5% 2.9%,13.5% 1.4%,16.5% 1.3%,18.0% 5.3%,19.5% 3.6%,22.5% 1.2%,24.5% 1.2%,26.5% 2.3%,28.5% 3.4%,31.0% 3.5%,33.0% 1.5%,35.0% 2.7%,36.5% 3.5%,38.5% 3.2%,41.5% 4.5%,44.5% 3.6%,47.5% 2.6%,49.5% 4.6%,51.5% 1.4%,54.0% 3.4%,56.5% 4.3%,59.0% 3.7%,60.5% 1.5%,63.5% 1.7%,66.0% 1.7%,69.0% 2.9%,70.5% 4.4%,73.0% 2.5%,75.5% 3.7%,78.5% 1.3%,80.0% 5.3%,83.0% 4.1%,84.5% 1.3%,87.0% 3.9%,90.0% 2.3%,93.0% 5.0%,95.5% 1.1%,98.5% 2.6%,100% 3%,100% 100%,0 100%);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@font-face{font-family:"Object Sans";src:local("Object Sans"),local("ObjectSans-Bold"),url("fonts/ObjectSans-Bold.woff2") format("woff2"),url("fonts/ObjectSans-Bold.otf") format("opentype");font-weight:100 900;font-display:swap}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:1.05rem;line-height:1.6}
+body::before{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.55;mix-blend-mode:multiply;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .3 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+h1,h2,h3,nav .logo{font-family:"Object Sans","Hanken Grotesk",Figtree,system-ui,sans-serif;line-height:1.05;margin:0}
+h1,h2,nav .logo{text-transform:uppercase}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+.note{font-family:Caveat,"Comic Sans MS",cursive;color:var(--orange);font-size:1.6rem;display:block;transform:rotate(-2deg);margin-bottom:.2rem}
+.hero-wrap{background:var(--navy);color:var(--cream)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0}
+nav .logo{font-weight:800;font-size:1.1rem;text-decoration:none;letter-spacing:.04em}
+nav ul{display:flex;gap:1.25rem;list-style:none;margin:0;padding:0}
+nav ul a{text-decoration:none;font-weight:500;opacity:.85}
+nav ul a:hover{opacity:1;color:var(--yellow)}
+.sheetwrap{position:relative;margin-top:2.5rem}
+.teal{position:absolute;left:-6%;top:-34px;width:75%;height:120px;background:var(--teal);transform:rotate(-4deg);clip-path:var(--tear)}
+.paper{position:relative;z-index:1;background:var(--cream);color:var(--ink);clip-path:var(--tear);padding:5rem 0 3.5rem}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(2.4rem,7vw,5rem);font-weight:800}
+.hero p{color:var(--muted);max-width:34ch;font-size:1.2rem;margin:1.25rem 0 1.75rem}
+.btn{display:inline-block;background:var(--navy);color:var(--cream);padding:.85rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none}
+.btn.alt{background:transparent;color:var(--navy);border:2px solid var(--navy);margin-left:.5rem}
+.carousel{position:relative}
+.slides{position:relative;aspect-ratio:1;overflow:hidden;border:7px solid #fff;border-radius:28px;box-shadow:0 12px 26px rgba(47,43,87,.28);transform:rotate(2deg)}
+.slide{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transform:translateX(30%);transition:transform .6s cubic-bezier(.4,0,.2,1),opacity .6s ease;pointer-events:none}
+.slide.on{opacity:1;transform:none;pointer-events:auto}
+.slide.out{opacity:0;transform:translateX(-30%)}
+.slide svg{width:62%}
+.cut{filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 6px 6px rgba(47,43,87,.25))}
+.art-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1}
+.ctrl{display:flex;justify-content:center;align-items:center;gap:.9rem;margin-top:1.1rem}
+.ctrl button{width:44px;height:44px;border-radius:50%;border:2px solid var(--navy);background:transparent;color:var(--navy);font-size:1.2rem;cursor:pointer}
+.ctrl button:hover{background:var(--navy);color:var(--cream)}
+.dots{display:flex;gap:.5rem}
+.dots button{width:12px;height:12px;padding:0;border-width:0;background:var(--teal)}
+.dots button.on{background:var(--orange);width:28px;border-radius:999px}
+.portrait{display:grid;place-items:center}
+.portrait img{width:112%;max-width:560px;height:auto;filter:drop-shadow(0 10px 14px rgba(47,43,87,.22))}
+section{padding:3.5rem 0}
+.head{margin-bottom:2rem}
+.head h2,.about h2,.contact h2{font-size:clamp(1.9rem,4.5vw,3rem);font-weight:800}
+.head p{color:var(--muted);margin:.5rem 0 0;max-width:52ch}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem}
+.card:nth-child(1){grid-column:1/-1}
+.card:nth-child(1) .art{aspect-ratio:1600/1131;background:var(--cream)}
+.card:nth-child(n+2) .art{aspect-ratio:1}
+.card,.sheet{background:#fff;padding:.75rem .75rem 1rem;border-radius:6px;box-shadow:0 10px 20px rgba(47,43,87,.16);position:relative}
+.card::before,.sheet::before{content:"";position:absolute;top:-13px;left:50%;width:88px;height:26px;margin-left:-44px;transform:rotate(-3deg);background:rgba(251,213,106,.8);z-index:2}
+.card:nth-child(1){transform:rotate(-1.5deg)}.card:nth-child(2){transform:rotate(1deg)}.card:nth-child(2)::before{background:rgba(155,220,213,.85)}.card:nth-child(3){transform:rotate(-.7deg)}
+.sheet:nth-child(2)::before{background:rgba(245,138,31,.55)}
+.card .art{position:relative;overflow:hidden;border-radius:4px;aspect-ratio:4/5;display:grid;place-items:center}
+.card h3{font-size:1.1rem;margin:.9rem .3rem 0}
+.card p{margin:.2rem .3rem 0;color:var(--muted);font-size:.95rem}
+.process{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem}
+.sheet h3{font-size:1.1rem;margin-bottom:.75rem}
+.row{display:flex;gap:.6rem}
+.row>div{flex:1;position:relative;overflow:hidden;border-radius:4px;aspect-ratio:3/4;display:grid;place-items:center}
+.row.wide>div{aspect-ratio:1}
+.about{display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center}
+.pic{position:relative;overflow:hidden;background:var(--c3);color:#e0a800;border:7px solid #fff;border-radius:50%;aspect-ratio:1;display:grid;place-items:center;box-shadow:0 12px 24px rgba(47,43,87,.25);transform:rotate(-3deg)}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.tags span{background:var(--yellow);padding:.3rem .9rem;border-radius:999px;font-size:.95rem;font-weight:500}
+.contact{background:var(--navy);color:var(--cream);clip-path:var(--tear);padding:5rem 2rem 3.5rem;text-align:center}
+.contact p{max-width:42ch;margin:.75rem auto 1.5rem;opacity:.85}
+.contact .btn{background:var(--orange);color:var(--navy)}
+footer{text-align:center;color:var(--muted);padding:2rem 0 3rem;font-size:.9rem}
+@media (max-width:760px){.hero,.about{grid-template-columns:1fr}.carousel{max-width:340px;margin:0 auto}.grid{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr}nav ul{gap:.9rem;font-size:.95rem}.portrait img{width:100%;max-width:400px}}
+@media (max-width:480px){.grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.slide{transition:none;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="char" viewBox="0 0 100 120">
+<path d="M22 118c0-24 12-40 28-40s28 16 28 40z" fill="currentColor" opacity=".6"/><circle cx="50" cy="42" r="28" fill="#fff8ea"/>
+<path d="M20 40c0-22 14-32 30-32s30 10 30 32c-8-12-18-16-30-16S28 28 20 40z" fill="currentColor"/>
+<circle cx="40" cy="46" r="3.5" fill="#2f2b57"/><circle cx="60" cy="46" r="3.5" fill="#2f2b57"/>
+<path d="M43 56q7 6 14 0" stroke="#2f2b57" stroke-width="3" fill="none" stroke-linecap="round"/></symbol></defs></svg>
+
+<div class="hero-wrap">
+ <div class="wrap">
+  <nav aria-label="Main"><a class="logo" href="#top">Isabella Cornish</a>
+   <ul><li><a href="#about">About</a></li><li><a href="#work">Work</a></li><li><a href="#process">Process</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+ </div>
+ <div class="sheetwrap"><div class="teal"></div>
+  <header class="paper" id="top"><div class="wrap hero">
+   <div><span class="note">portfolio ✦</span><h1>Isabella Cornish</h1>
+    <p>Character design and illustration. Friendly, memorable characters for games, animation and books.</p>
+    <a class="btn" href="#work">See my work</a><a class="btn alt" href="#contact">Get in touch</a></div>
+   <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Featured characters">
+    <div class="slides"><div class="slide on" style="background:var(--c1);color:#f58a1f"><svg class="cut" viewBox="0 0 100 120" ><use href="#char"/></svg><img class="art-img" data-img="images/carousel/slide-1" alt="Artwork"></div><div class="slide" style="background:var(--c2);color:#2fa99b"><svg class="cut" viewBox="0 0 100 120" ><use href="#char"/></svg><img class="art-img" data-img="images/carousel/slide-2" alt="Artwork"></div><div class="slide" style="background:var(--c3);color:#e0a800"><svg class="cut" viewBox="0 0 100 120" ><use href="#char"/></svg><img class="art-img" data-img="images/carousel/slide-3" alt="Artwork"></div><div class="slide" style="background:var(--c4);color:#4a4585"><svg class="cut" viewBox="0 0 100 120" ><use href="#char"/></svg><img class="art-img" data-img="images/carousel/slide-4" alt="Artwork"></div></div>
+    <div class="ctrl"><button type="button" id="prev" aria-label="Previous character">‹</button><div class="dots" id="dots"></div><button type="button" id="next" aria-label="Next character">›</button></div>
+   </div></div></header>
+ </div>
+</div>
+
+<div class="wrap">
+ <section id="about"><div class="about">
+  <div class="portrait"><img src="images/about/profile.png" alt="Self-portrait sketch of Isabella holding a stylus and tablet"></div>
+  <div><span class="note">hello!</span><h2>About me</h2>
+   <p>Hi, I'm Isabella Cornish, a character designer and illustrator based in Brisbane. I love creating characters that feel alive, with clear shapes, strong colour and a story you can read at a glance. Write two or three more sentences here about your style and what inspires you.</p>
+   <div class="tags"><span>Character design</span><span>Illustration</span><span>Concept art</span><span>Procreate</span><span>Photoshop</span></div></div>
+ </div></section>
+
+ <section id="work"><div class="head"><span class="note">my favourites →</span><h2>Selected work</h2><p>A few of my favourite characters and illustrations.</p></div>
+  <div class="grid"><article class="card"><div class="art"><img class="art-img" data-img="images/work/work-1" alt="Character design sheet with several original characters, including a cowboy, a coat-wearing detective and a caped elf"></div><h3>Character design sheet</h3><p>Original characters · Digital</p></article><article class="card"><div class="art" style="background:var(--c2);color:#2fa99b"><svg class="cut" viewBox="0 0 100 120" width="65%"><use href="#char"/></svg><img class="art-img" data-img="images/work/work-2" alt="Artwork"></div><h3>Character name</h3><p>Forest guide · Digital</p></article><article class="card"><div class="art" style="background:var(--c3);color:#e0a800"><svg class="cut" viewBox="0 0 100 120" width="65%"><use href="#char"/></svg><img class="art-img" data-img="images/work/work-3" alt="Artwork"></div><h3>Character name</h3><p>Sidekick · Ink and colour</p></article></div></section>
+
+ <section id="process"><div class="head"><span class="note">sketch to final</span><h2>Design process</h2><p>I start with simple shapes, then build out each character so they work from every angle and with every mood.</p></div>
+  <div class="process"><div class="sheet"><h3>Turnaround</h3><div class="row"><div style="background:var(--c4);color:#4a4585"><svg class="cut" viewBox="0 0 100 120" width="80%"><use href="#char"/></svg><img class="art-img" data-img="images/process/turnaround-1" alt="Artwork"></div><div style="background:var(--c4);color:#4a4585"><svg class="cut" viewBox="0 0 100 120" width="80%"><use href="#char"/></svg><img class="art-img" data-img="images/process/turnaround-2" alt="Artwork"></div><div style="background:var(--c4);color:#4a4585"><svg class="cut" viewBox="0 0 100 120" width="80%"><use href="#char"/></svg><img class="art-img" data-img="images/process/turnaround-3" alt="Artwork"></div></div></div>
+  <div class="sheet"><h3>Expressions</h3><div class="row wide"><div style="background:var(--c1);color:#f58a1f"><svg class="cut" viewBox="0 0 100 120" width="90%"><use href="#char"/></svg><img class="art-img" data-img="images/process/expression-1" alt="Artwork"></div><div style="background:var(--c1);color:#f58a1f"><svg class="cut" viewBox="0 0 100 120" width="90%"><use href="#char"/></svg><img class="art-img" data-img="images/process/expression-2" alt="Artwork"></div><div style="background:var(--c1);color:#f58a1f"><svg class="cut" viewBox="0 0 100 120" width="90%"><use href="#char"/></svg><img class="art-img" data-img="images/process/expression-3" alt="Artwork"></div><div style="background:var(--c1);color:#f58a1f"><svg class="cut" viewBox="0 0 100 120" width="90%"><use href="#char"/></svg><img class="art-img" data-img="images/process/expression-4" alt="Artwork"></div></div></div></div></section>
+</div>
+
+<section id="contact" style="padding-bottom:0"><div class="contact"><span class="note" style="display:inline-block">say hi!</span><h2>Let's make something together</h2>
+ <p>Available for commissions and collaborations. Send me a message and I'll reply soon.</p><a class="btn" href="mailto:you@example.com">Email me</a></div></section>
+<footer>© 2026 Isabella Cornish. All artwork is my own.</footer>
+
+<script>
+(function(){
+ var slides=document.querySelectorAll('.slide'),dots=document.getElementById('dots'),i=0,timer=null;
+ var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ slides.forEach(function(_,n){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show character '+(n+1));b.onclick=function(){go(n);restart();};dots.appendChild(b);});
+ function go(n){var p=i;i=(n+slides.length)%slides.length;slides.forEach(function(s,k){s.classList.toggle('on',k===i);s.classList.toggle('out',k===p&&p!==i);});dots.childNodes.forEach(function(d,k){d.classList.toggle('on',k===i);});}
+ function restart(){clearInterval(timer);if(!reduce)timer=setInterval(function(){go(i+1);},3000);}
+ document.getElementById('prev').onclick=function(){go(i-1);restart();};
+ document.getElementById('next').onclick=function(){go(i+1);restart();};
+ var c=document.querySelector('.carousel');c.addEventListener('mouseenter',function(){clearInterval(timer);});c.addEventListener('mouseleave',restart);
+ go(0);restart();
+})();
+document.querySelectorAll('img[data-img]').forEach(function(img){
+ var exts=['jpg','png','webp','jpeg'],k=0;
+ function t(){if(k>=exts.length){img.remove();return;}img.src=img.dataset.img+'.'+exts[k++];}
+ img.onerror=t;t();
+});
+</script>
+</body>
+</html>

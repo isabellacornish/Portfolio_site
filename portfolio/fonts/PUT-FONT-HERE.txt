@@ -1,0 +1,3 @@
+Object Sans is not a Google font. Download it from Pangram Pangram (check its licence for your use).
+Save the Bold weight here as ObjectSans-Bold.woff2 or ObjectSans-Bold.otf.
+Until then the page uses Hanken Grotesk, a similar clean grotesque.

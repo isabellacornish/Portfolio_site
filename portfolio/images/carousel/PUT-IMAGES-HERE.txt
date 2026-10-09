@@ -1,0 +1,2 @@
+Name your 4 images: slide-1, slide-2, slide-3, slide-4
+Best size: square (e.g. 1200 x 1200 px). File types: jpg, png or webp.

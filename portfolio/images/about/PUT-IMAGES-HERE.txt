@@ -1,0 +1,2 @@
+profile.png is your self-portrait for the About me section (already added).
+To swap it, replace the file and keep the name profile.png.
