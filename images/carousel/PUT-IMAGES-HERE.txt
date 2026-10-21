@@ -1,2 +1,3 @@
-Name your 4 images: slide-1, slide-2, slide-3, slide-4
-Best size: square (e.g. 1200 x 1200 px). File types: jpg, png or webp.
+Carousel images slide-1 to slide-5 are already added (square, white background, waist-up).
+To swap one, replace the file and keep the name (jpg, png or webp).
+The carousel shows one slide per image in index.html.

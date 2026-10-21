@@ -1,0 +1,4 @@
+Panel 1: creature-1-left / middle / right (jpg, colour, on grey).
+Panel 2: creature-2-left / middle / right (transparent png, greyscale).
+Panel 3: creature-3-left / middle / right (transparent png, blue pen sketches).
+All added. To swap one, replace the file and keep the name.

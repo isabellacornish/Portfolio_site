@@ -1,3 +1,2 @@
-Turnaround (3 images, portrait 3:4): turnaround-1, turnaround-2, turnaround-3
-Expressions (4 images, square): expression-1, expression-2, expression-3, expression-4
-File types: jpg, png or webp.
+turnaround.jpg = full body turnaround. expression-1 to expression-6 = the six faces. sketches.jpg = sketch page.
+All already added. To swap any, replace the file and keep the same name. jpg, png or webp.
